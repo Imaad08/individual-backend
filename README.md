@@ -82,6 +82,18 @@ model: This directory contains files that implement the backend functionality fo
 
 templates: This directory contains files and subdirectories used to support the home and error pages of the website.
 
+templates/layouts/base.html:  This is the Jinja2 template that defines the the head and body requirements for all pages within the site.  This includes navbar.html which provides the menu for the site.
+
+templates/index.html: This is the home page for the site.  It extends base.html and shows the usage of bootstrap cards.
+
+templates/table.html: This is a submenu page and it extends base.html and shows the usage of jQuery data table.
+
+projects: This directory contains files for setting up routes to static HTML pages.
+
+projects/project.py:  This Python file sets up routes to render template files.
+
+projects/templates/bp_projects:  This shows additional Jinja2 formatting such as nested extends and url_for.
+
 .gitignore: This file specifies elements to be excluded from version control. Files are excluded when they are derived and not considered part of the project’s original source. In the VSCode Explorer, you may notice some files appearing dimmed, indicating that they are intentionally excluded from version control based on the rules defined in .gitignore.
 
 ### Implementation Summary
