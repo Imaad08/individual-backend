@@ -53,7 +53,7 @@ Run the Python server from the command line
 - Change the Home Page, and dress it up with ideas from your project.
 - Add some color and fun through VANTA Visuals (birds, halo, solar, net)
 - Show some practical and fun links (hrefs) like Twitter, Git, Youtube
-- Build a Sample Page (The table is provided as as a guide to Jinja)
+- Build a Sample Page (The table is provided as a guide to Jinja)
 - Change the project-specific links page
 
 ### Files and Directories in this Project
@@ -74,6 +74,10 @@ static: This directory is the standard location for files that you want to be ca
 
 api: This directory contains code that receives and responds to requests from external servers. It serves as the interface between the external world and the logic and code in the rest of the project.
 
+api/users:  These API's are guarded by @token_required, test these using Postman, first you must authenticate http://127.0.0.1:8086/api/users/authenticate using raw body JSON {"uid": "toby", "password": "123toby"} which will obtain a Cookie. Then you can use the API http://127.0.0.1:8086/api/users
+
+api/players: These API's are unguarded. The GET method can be run in the browser http://127.0.0.1:8086/api/players/.   PUT, POST, DELETE methods are supported and can be tested in POSTMAN. 
+
 model: This directory contains files that implement the backend functionality for many of the files in the api directory. For example, there may be files in the model directory that directly interact with the database.
 
 templates: This directory contains files and subdirectories used to support the home and error pages of the website.
@@ -91,3 +95,5 @@ templates: This directory contains files and subdirectories used to support the 
 #### January 2024
 
 - Make this project a template for a Python backend server.
+- Add README entries for migrate.sh usage, database setup and migration
+- Add README entries for api/users and api/players
