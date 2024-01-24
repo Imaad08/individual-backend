@@ -15,9 +15,14 @@ Install Python and then install Python dependencies for Flask, etc.
 pip install -r requirements.txt
 ```
 
-- Run from Terminal without VSCode
+- Run from Terminal without VSCode, run each time you change schema
 
-  - Setup database and init data
+  - Setup database with data
+  
+  ```bash
+    ./migrate.sh
+  ```
+
 Run the Python server from the command line
 
     ```bash
